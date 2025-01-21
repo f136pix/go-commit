@@ -10,6 +10,7 @@ var (
 	files []string
 )
 
+// generateCmd represents the "commit generate" subcommand
 var generateCmd = &cobra.Command{
 	Use:   "generate",
 	Short: "Generates a commit message based on the current Git repository context",
@@ -28,6 +29,7 @@ func init() {
 	generateCmd.Flags().StringSliceVarP(&files, "file", "f", []string{}, "Files to analyze")
 
 	// -o flag
+	generateCmd.Flags().StringSliceVarP(&files, "only", "o", []string{}, "Files to analyze (staged only)")
 
 	CommitCmd.AddCommand(generateCmd)
 }

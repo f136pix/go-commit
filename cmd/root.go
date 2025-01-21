@@ -5,6 +5,7 @@ package cmd
 
 import (
 	"go-commit/cmd/commit"
+	"go-commit/cmd/config"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -29,6 +30,7 @@ func Execute() {
 // addSubcommandPalletes adds all subcommands to the root command
 func addSubcommandPalletes() {
 	rootCmd.AddCommand(commit.CommitCmd)
+	rootCmd.AddCommand(config.ConfigCmd)
 }
 
 func init() {

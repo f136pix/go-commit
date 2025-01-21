@@ -1,12 +1,12 @@
-package commit
+package config
 
 import (
 	"github.com/spf13/cobra"
 )
 
-// CommitCmd represents the commit command
-var CommitCmd = &cobra.Command{
-	Use:   "commit",
+// ConfigCmd represents the commit command
+var ConfigCmd = &cobra.Command{
+	Use:   "config",
 	Short: "",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -15,7 +15,7 @@ var CommitCmd = &cobra.Command{
 }
 
 func init() {
-	// CommitCmd.AddCommand(generateCmd)
+	//ConfigCmd.AddCommand(setDetailCmd)
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
